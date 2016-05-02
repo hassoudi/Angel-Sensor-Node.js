@@ -23,6 +23,4 @@ function accelerationWaveform(characteristic) {
 
 }
 
-
-
 module.exports = accelerationWaveform;
