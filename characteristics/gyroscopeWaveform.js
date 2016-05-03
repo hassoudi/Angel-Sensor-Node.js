@@ -39,19 +39,7 @@ function unpack(byte1, byte2) {
 function accelerationWaveform(characteristic) {
 
   characteristic.on('read', function(data, isNotification) {
-
-    start = start == undefined ? new Date() : start;
-
-
     while (data.length >= 6) {
-      samples++;
-
-      if (start && new Date() - start >= 1000) {
-        //console.log('1 second passed: ' + samples + '#/sec');
-        start = undefined;
-        samples = 0;
-      }
-
       // Unpack
       var x = unpack(data[0], data[1]);
       var y = unpack(data[2], data[3]);
