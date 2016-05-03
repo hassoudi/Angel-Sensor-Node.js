@@ -18,7 +18,7 @@ function accelerationEnergyMagnitude(characteristic) {
     var sampleSize = 3;
     for (var i = sampleSize - 1; i < data.length; i += sampleSize) {
       var wave  = data[i-2] + data[i-1]*256 + data[i]*256*256;
-      console.log(wave);
+      //console.log(wave);
     }
   });
 
