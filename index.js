@@ -36,9 +36,6 @@ noble.on('discover', function(peripheral) {
 
       angelSensor.discoverServices(null, function(error, services) {
         for (var i in services) {
-          console.log(services[i]);
-
-          /*
           var service = services[i];
           var serviceUuid = service.uuid;
           switch(serviceUuid) {
@@ -64,7 +61,6 @@ noble.on('discover', function(peripheral) {
               activityMonitoringService(service);
               break;
           }
-          */
         }
 
       });
