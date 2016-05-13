@@ -3,7 +3,7 @@ GYROSCOPE WAVEFORM
 
 Unfortunately no documentation...
 */
-
+var prependFile = require('prepend-file');
 var bufferpack = require('bufferpack');
 
 var angleX = 0;
@@ -52,6 +52,14 @@ function accelerationWaveform(characteristic) {
       data = data.slice(6);
 
       console.log('GYRO:\t' + x + ' ' + y + ' ' + z);
+      prependFile('data.txt', angleX + '\n', function(err) {
+        if (err) {
+          console.log('Unable to write waveform');
+        }
+        // Success 
+        //console.log(wave);
+      });
+
     }
 
   });
