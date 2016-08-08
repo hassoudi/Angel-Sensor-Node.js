@@ -14,7 +14,7 @@ function accelerationWaveform(characteristic) {
     if (data.length >= 3) {
       var wave = data[0] + (data[1] << 8) + (data[2] << 16);
 
-      //console.log(wave);
+      console.log(wave);
     }
   });
 
